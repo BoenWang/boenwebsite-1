@@ -1,5 +1,4 @@
 layout: aboutme
-title: About Icarus
 ---
 
 # About Me

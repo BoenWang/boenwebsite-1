@@ -70,6 +70,7 @@ table.mainmenu td {
     padding: 14px;
     position: relative;
     bottom: 24px;
+    margin-bottom: 0px;
 }
 /* table > tr > td :hover{
     background-color: blue;

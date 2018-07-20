@@ -1,0 +1,69 @@
+<link rel="stylesheet" type="text/css" href="../css/tooltipster.bundle.min.css" />
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+<script type="text/javascript" src="../js/tooltipster.bundle.min.js"></script>
+<script>
+        $(document).ready(function() {
+                $('.myImg').tooltipster({
+                        theme: 'tooltipster-borderless',
+                        trigger: 'click',
+                        maxWidth: '500',
+                        animation: 'grow',
+                        side: ['right']
+    });
+    $('.tooltip').tooltipster({
+                        theme: 'tooltipster-borderless',
+                        trigger: 'click',
+                        maxWidth: '500',
+                        animation: 'grow',
+                        side: ['left']
+    });
+
+
+  
+        });
+       </script>
+     <style>
+            .tooltip_templates { display: none; }
+            </style>
+
+
+
+<h1 style=  "text-align: center; border: 1px solid black;">Extracurriculars</h1>
+<h4 style="text-align: center"> Click on one to read more information.</h4>
+
+<div style="border: 1px solid black; background-color: orange; height: 400px;">
+<h1 style="text-align: center">Sports</h1>
+<div class="mbimg">
+    <h3 style="margin: 0px; text-align: center">Marching Band</h3>
+    <img src="../img/mb.jpg" width="100%" height="258px" style="border: none" class="myImg"  data-tooltip-content="#tooltip_content">
+</div>
+<div class="tooltip_templates">
+    <p id="tooltip_content">
+            <strong>When I first joined marching band, I didn't even really want to be a part of the program. It was just a mandatory thing that all freshmen band members were required to particiapte in. However, marching band has allowed me to form strong bonds with new people and reinforcing my older friendships through the countless sweaty hours on the field. The second place finish at Bands of America really impacted me as it was the first time in my life where I accomplished something great as an individual part of a bigger picture, a unified team.</strong>
+    </p>
+</div>
+<div class="badimg">
+    <h3 style="margin: 0px; text-align: center">Badminton</h3>
+    <p class="tooltip" data-tooltip-content="#badminton">badminton photo</p>
+</div>
+<div class="tooltip_templates" >
+<p id="badminton">
+    <strong>I have been playing badminton for multiple years now, and it really has grown on me. As a kid, my dad took me to play with him. As I grew older, I started training with a coach two or three times. With me now in high school, I was able to join the school badminton team as a varsity singles player. This first season has brought me numerous new friends and catapulted my passion for the sport. Through badminton, I learned the values of teamwork and was inspired by the spirit, motivating me to work hard. Badminton has taught me to change my mind set and constantly work to improve and become better at the sport.</strong>
+</p>    
+</div>
+</div>
+
+<div>
+    <h1 style="text-align: center">Clubs</h1>
+</div>
+
+<div>
+    <h1 style="text-align: center">Competitions</h1>
+</div>
+
+<div>
+    <h1 style="text-align: center">Miscellaneous</h1>
+    
+
+</div>
