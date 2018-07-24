@@ -65,12 +65,8 @@ table.mainmenu td {
     color: white;
     font-size: 25px;
     font-family: 'Times New Roman', Times, serif;
-    letter-spacing: 2px;
-    word-spacing: 5px;
-    padding: 14px;
-    position: relative;
-    bottom: 24px;
-    margin-bottom: 0px;
+    margin-top: 20px;
+    margin: 0px;
 }
 /* table > tr > td :hover{
     background-color: blue;

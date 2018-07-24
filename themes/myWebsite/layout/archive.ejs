@@ -1,0 +1,72 @@
+<%- css('css/article.css') %>
+<%- css('css/timeline.css') %>
+<%- css('libs/font-awesome/css/font-awesome.min.css') %>
+<div style="width:100%">
+    <div style="width:75%; display:block;float:left;">
+        <% page.posts.each(function(post) { %>
+            <article id="<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+                <div class="article-inner">
+                    <% if (post.banner) { %>
+                        <img src="<%- post.banner %>" class="article-banner" style="max-height:500px" />
+                    <% } %>
+                    <% if (post.title) { %>
+                        <header class="article-header">
+                        <h1>
+                            <%- post.title %>
+                        </h1>
+                        <div class="article-tag" style="float: left; margin: 0px">
+                            <i class="fa fa-calendar"></i>
+                            <%= date(post.date, "MM/DD/YYYY") %>
+                        </div>
+                        <div class= "article-tag" style="padding-left:100px;">
+                            <i class="fa fa-folder"></i>
+                            <%= post.type %>
+                        </div>
+                        </header>
+                    <% } %>
+                    <div class="article-entry" itemprop="articleBody">
+                        <p>
+                            <%- post.content %>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        <% }) %>
+    </div>
+    <div style="width:20%; float:left;">
+        <div class="timeline-wrap">
+            <% var last;
+            page.posts.each(function(post, i) { 
+                var year = post.date.year();
+                if (last != year) {
+                    last = year; %>
+                    <div style="margin:20px">
+                        <span class="node">
+                            <i class="fa fa-calendar" style="margin-top: 6px;margin-left: 7px"></i>
+                        </span>   
+                        <span><%= year %></span>
+                    </div>
+                <% } %>
+                <div style="margin: 20px">
+                    <span class="node1" style="float:left;" ></span> 
+                    <div style="display:block;padding-top: 2px;">
+                        <a href="#<%= post.slug %>">
+                            <%- post.title %>
+                        </a> 
+                        <div class="article-tag" style="float: left; margin: 0px">
+                            <i class="fa fa-calendar"></i>
+                            <%= date(post.date, "MM/DD/YYYY") %>
+                        </div>
+                        <div class= "article-tag" style="padding-left:100px;margin: 0px">
+                            <i class="fa fa-folder"></i>
+                            <%= post.type %>
+                        </div>
+                    </div>
+                </div>
+
+            <% }); %>
+        </div>
+    </div>
+</div>
+    
+

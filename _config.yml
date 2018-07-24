@@ -79,6 +79,6 @@ theme: myWebsite
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/BoenWang/BoenProject.git
+  repo: https://github.com/mayuehehe/mayuehehe.git
   branch: master
   message: alert
